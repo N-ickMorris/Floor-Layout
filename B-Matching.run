@@ -1,0 +1,7 @@
+reset;
+model B-Matching.mod;
+data B-Matching.dat;
+option solver cplex;
+solve;
+display x,f;
+#print{i in D,j in D: i<j}: i,l[i],h[i],j,l[j],h[j],x[i,j],f[i,j] >> B-Matching.xls;

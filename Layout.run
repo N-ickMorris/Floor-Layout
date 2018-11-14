@@ -1,0 +1,7 @@
+reset;
+model Layout.mod;
+data Layout.dat;
+option solver cplex;
+solve;
+display x, y, l, w;
+#print{i in D}: i, x[i], y[i], l[i], w[i] >> Layout.xls;

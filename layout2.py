@@ -127,6 +127,6 @@ model.CenterY2 = Constraint(model.D, model.D, rule = CenY2)    # absolute value 
 from pyomo.opt import SolverFactory
 opt = SolverFactory("glpk")
 # opt = SolverFactory('ipopt',solver_io='nl')
-instance = model.create_instance("layout.dat")
+instance = model.create_instance("layout2.dat")
 results = opt.solve(instance)
 instance.display()
